@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script> var yValues = [0,0,0,0]; var historyIdx = 0; var selectedHistorySql = "";</script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0-rc.1/chartjs-plugin-datalabels.min.js" integrity="sha512-+UYTD5L/bU1sgAfWA0ELK5RlQ811q8wZIocqI7+K0Lhh8yVdIoAMEs96wJAIbgFvzynPm36ZCXtkydxu1cs27w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- commandButton  -->
+        <div class="commandButton">
+            <div class="QueriesButton">
+                <button onclick="query()">Queries</button>
+            </div>
+            <div class="ChartsButton">
+                <button onclick="charts()">Charts</button>
+            </div>
+            <div class="SQLConsoleButton">
+                <button onclick="sqlConsole()">SQL Console</button>
+            </div>
+            <div class="AboutButton">
+                <button>About</button>
+            </div>
+            <div class="LanguageButton">
+                <button>English</button>
+            </div>
+            <div class="version">
+            <p style="display:inline;">v0.5.11</p>
+            </div>
+        </div>
+        
+        <!-- Welcome page -->
+        <!-- If you want to test, change display to none -->
+        <div class="welcome" style="display: block;">
+            <div class="welcomeText">Welcome to this tool</div>
+        </div>
+
+        <!-- Queries page -->
+        <div class="query" style="display:none">
+            <div class="title">Queries</div>
+            <button id="hintNL" onclick="addHint('hintNL')">USE_NL</button>
+            <button id="hintHASH" onclick="addHint('hintHASH')">USE_HASH</button>
+            <button id="hintMERGE" onclick="addHint('hintMERGE')">USE_MERGE</button>
+            <button id="noHint" onclick="addHint('noHint')">NO_HINT</button>
+            <div class="workpalce">
+                <textarea class="input" type="text" id="queriesInput">select * from test</textarea>
+                <div class="buttons">
+                    <button class="leftButton"  onclick="clearQueries()">Clear</button>
+                    <button class="rightButton" onclick="executeQueries()">Execute</button>
+                </div>
+            </div>
+            <footer class="returnButton">
+                <button onclick="myFunction()">OK</button>
+            </footer>  
+        </div>
+
+        <!-- Charts page -->
+        <div class="charts" style="display:none">
+            <div class="title">Diagrams</div>
+                <div class="workpalce">
+                    <div class="buttons">
+                        <button onclick="comparison()">Comparison</button>
+                        <button onclick="showHistory()">History</button>
+                    </div>
+                    
+                    <div class="Comparison" style="display:block">
+                        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                    </div> 
+                    
+                    <div id="History" style="display:none">
+                        <div class="buttons">
+                            <button class="rightButton" onclick="explainPlan()">Execute</button>
+                        </div>
+                    </div>
+                    
+                    <div class="ExecutionPlan" style="display: none;">
+                        This is a place to show ExecutionPlan
+                        <table border="1" cellspacing=0>
+                            <tr>
+                               <th>Operations</th>
+                               <th>operation</th>
+                               <th>bytes</th>
+                               <th>tempSpace</th>
+                               <th>cost</th>
+                            </tr>
+                            <tr>
+                               <td class="Operations"></td>
+                               <td class="operation"></td>
+                               <td class="bytes"></td>
+                               <td class="tempSpace"></td>
+                               <td class="cost"></td>
+                            </tr>
+                         </TABLE>
+                        <div class="title">
+
+                        </div>
+                        <div class="value"> 
+
+                        </div>
+                    </div>
+
+            </div>
+            <footer class="returnButton">
+                <button onclick="myFunction()">OK</button>
+            </footer>  
+        </div>
+
+        <!-- sql console page -->
+        <div class="sqlConsole" style="display:none">
+            <div class="title">SQL Console</div>
+            <div class="workpalce">
+                <div class="result" id="queryResult">this is result to show</div>
+                <div class="queryName">Query:</div>
+                <input type="text" value="select * from test" id="queryInput"></input>
+                <div class="buttons">
+                    <button class="leftButton"  onclick="clearFunction()">Clear</button>
+                    <button class="rightButton" onclick="excute()">Execute</button>
+                </div>
+            </div>
+            <footer class="returnButton">
+                <button onclick="myFunction()">OK</button>
+            </footer>  
+        </div>
+        
+    </div>
+</body>
+</html>

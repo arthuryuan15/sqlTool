@@ -1,0 +1,204 @@
+
+.container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    /* bottom: 0;
+    right: 0; */
+    width: 400px;
+    height: 350px;
+  }
+
+.commandButton {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.welcome {
+    margin: auto;
+    padding: 2.5%;
+    padding-bottom: 5%;
+    height: 95%;
+    width: 95%;
+    background-color: RGB(141, 157, 168);
+    text-align: center;
+}
+
+.sqlConsole {
+    margin: 0%;
+    padding: 2.5%;
+    padding-bottom: 5%;
+    height: 95%;
+    width: 95%;
+    background-color: RGB(141, 157, 168);
+}
+
+.query {
+    margin: 0%;
+    padding: 2.5%;
+    padding-bottom: 5%;
+    height: 95%;
+    width: 95%;
+    background-color: RGB(141, 157, 168);
+}
+
+.charts {
+    margin: 0%;
+    padding: 2.5%;
+    padding-bottom: 5%;
+    height: 95%;
+    width: 95%;
+    background-color: RGB(141, 157, 168);
+}
+
+/*--------------------------------------------------------------
+# Function title
+--------------------------------------------------------------*/
+
+.sqlConsole .title{
+    height: 8%;
+    width: 100%;
+    text-align: left;
+}
+
+
+
+/*--------------------------------------------------------------
+# 1 Queries workpalce
+--------------------------------------------------------------*/
+.query .workpalce {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    height: 80%;
+    margin-bottom: 2%;
+    padding: 1%;
+    background-color: RGB(255, 255, 255);
+}
+
+.query .workpalce .input{
+    position: relative;
+    height: 85%;
+    width: auto;
+
+}
+
+.query .workpalce .query{
+    position: relative;
+}
+
+
+.query .workpalce .buttons{
+    margin-top: 0.5%;
+}
+
+.query .workpalce .leftButton{
+    text-align: left;
+}
+
+.query .workpalce .rightButton{
+    float: right;
+}
+
+
+/*--------------------------------------------------------------
+# 2  Charts workpalce
+--------------------------------------------------------------*/
+.charts .workpalce {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    height: 80%;
+    margin-bottom: 2%;
+    padding: 1%;
+    background-color: RGB(255, 255, 255);
+}
+
+
+.charts .workpalce .buttons{
+    margin-top: 0.5%;
+}
+
+.charts .workpalce #History .rightButton{
+    float: right;
+}
+
+.charts .workpalce .ExecutionPlan{
+    border: red;
+}
+
+.charts .workpalce .ExecutionPlan .title{
+    column-count: 5;
+    border-color: red;
+}
+
+
+/*--------------------------------------------------------------
+# 3 sqlConsole workpalce
+--------------------------------------------------------------*/
+.sqlConsole .workpalce {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    height: 85%;
+    margin-bottom: 2%;
+    padding: 1%;
+    background-color: RGB(255, 255, 255);
+
+}
+
+.sqlConsole .workpalce .result{
+    position: relative;
+    height: 85%;
+    width: auto;
+    border: 1px solid black;
+}
+
+.sqlConsole .workpalce .queryName{
+    position: relative;
+    height: 7%;
+}
+
+.sqlConsole .workpalce .query{
+    position: relative;
+}
+
+
+.sqlConsole .workpalce .buttons{
+    margin-top: 0.5%;
+}
+
+.sqlConsole .workpalce .leftButton{
+    text-align: left;
+}
+
+.sqlConsole .workpalce .rightButton{
+    float: right;
+}
+
+
+/*--------------------------------------------------------------
+# footer
+--------------------------------------------------------------*/
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.returnButton {
+    float: right;
+}
+
+/*--------------------------------------------------------------
+# welcome
+--------------------------------------------------------------*/
+
+
+.welcomeText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
