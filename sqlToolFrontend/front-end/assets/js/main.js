@@ -198,7 +198,6 @@ function comparison(){
 
   var xValues = ["no.4(MERGE)", "no.3(HASH)", "no.2 (NL)", "no.1(NoHint)"];
   var barColors = ["orange", "orange","orange","orange"];
-
   new Chart("myChart", {
     type: "bar",
     data: {
@@ -206,14 +205,13 @@ function comparison(){
       datasets: [{
         backgroundColor: barColors,
         data: yValues,
-        borderWith: 1
+        label: 'cost time'
       }]
     },
     options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
+      legend: {display: false},
+      title: {
+        display: true
       }
     },
     plugins: [ChartDataLabels],
