@@ -24,7 +24,7 @@ function clearFunction() {
 function excute(){
   var x = document.getElementById('queryInput');
   var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-  var theUrl = "http://127.0.0.1:8080/sqlTools/api/query";
+  var theUrl = "http://1.117.200.132:8080/sqlTools/api/query";
 
   xmlhttp.open("POST", theUrl);
   xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
@@ -129,7 +129,7 @@ function executeQueries(){
   }
   
   var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-  var theUrl = "http://127.0.0.1:8080/sqlTools/api/query";
+  var theUrl = "http://1.117.200.132:8080/sqlTools/api/query";
 
   xmlhttp.open("POST", theUrl);
   xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
@@ -241,7 +241,7 @@ function explainPlan(){
   var x = selectedHistorySql;
   console.log(x);
   var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-  var theUrl = "http://127.0.0.1:8080/sqlTools/api/explainPlan";
+  var theUrl = "http://1.117.200.132:8080/sqlTools/api/explainPlan";
 
   xmlhttp.open("POST", theUrl);
   xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
